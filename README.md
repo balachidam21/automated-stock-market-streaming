@@ -5,6 +5,8 @@ This project demonstrates how streaming data is extracted, structured and stored
 
 Retrives stock market info from Market Stack API. Sends the stock market API data to Kafka topic every 1 hour. Each message is read by Kafka consumer using Spark Structured Streaming and written to Cassandra table every time the data is streamed.
 
+You can create an access key for Market Stack API [here](https://marketstack.com/).
+
 ## Apache Airflow
 
 Run the following command to clone the necessary repo on your local
