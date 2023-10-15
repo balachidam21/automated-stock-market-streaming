@@ -59,7 +59,7 @@ CREATE KEYSPACE spark_structured_streaming WITH replication = {'class':'SimpleSt
 ```
 
 ```bash
-CREATE TABLE spark_strcutred_streaming.stock_marke(key text primary key, symbol text, datetime text, open float, close float, current float, volume float);
+CREATE TABLE spark_strcutred_streaming.stock_market(key text primary key, symbol text, datetime text, open float, close float, current float, volume float);
 ```
 
 ## Spark
@@ -92,7 +92,9 @@ After running the commmand, the data is populated into Cassandra table.
 ## Code Repo and Run Instructions
 
 `streaming.py` -> This script retrieves data from Market Stack API and sends it to Kafka topic.
+
 `stream_dag.py` -> This script containes Airflow DAG that automates to run the pipeline every hour.
+
 `spark_structured_streaming.py` -> This script contains Spark code that acts as Kafka Consumer that consumes streaming data produced by `streaming.py` and structures the data and writes to Cassandra table.
 
 Move the `streaming.py` and `stream_dag.py` scripts under `dags` folder in `docker-airflow` repo. Once you refresh the Airflow UI, `stock_market_streaming` DAG appears in DAGs page.
