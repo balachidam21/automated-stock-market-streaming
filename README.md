@@ -3,7 +3,7 @@ This repository illustrates the use of multiple tech stacks like Apache Spark, K
 
 This project demonstrates how streaming data is extracted, structured and stored using a automated pipeline deployed in Airflow.
 
-Retrives stock market info from Market Stack API. Sends the stock market API data to Kafka topic every hours. Each message is read by Kafka consumer using Spark Structured Streaming and written to Cassandra table every time the data is streamed.
+Retrives stock market info from Market Stack API. Sends the stock market API data to Kafka topic every 1 hour. Each message is read by Kafka consumer using Spark Structured Streaming and written to Cassandra table every time the data is streamed.
 
 ## Apache Airflow
 
